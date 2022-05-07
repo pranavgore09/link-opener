@@ -1,8 +1,13 @@
 {
 	"name": "link-opener",
 	"displayName": "Link Opener",
+	"publisher": "pgvscodeextentionpublisher",
 	"description": "",
 	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:pranavgore09/link-opener.git"
+	},
 	"engines": {
 		"vscode": "^1.66.0"
 	},
