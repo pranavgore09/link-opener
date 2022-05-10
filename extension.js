@@ -40,6 +40,8 @@ function activate(context) {
 					cp.exec(cmd, { shell: '/bin/bash' }, (error, stdout, stderr) => {
 						if (error) {
 							console.error(`exec error: ${error}`);
+							vscode.env.openExternal(vscode.Uri.parse(urls[0]));
+							vscode.window.showInformationMessage('First Link Opened!');
 							return;
 						}
 						console.log(`stdout: ${stdout}`);
