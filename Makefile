@@ -8,3 +8,7 @@ login:
 	echo "Step3: Get token from https://dev.azure.com/vscodeextenstions/_usersSettings/tokens"
 	echo "Use this token to login"
 	vsce login pgvscodeextentionpublisher
+
+show-urls:
+	echo "Extention URL = https://marketplace.visualstudio.com/items?itemName=pgvscodeextentionpublisher.link-opener"
+	echo "Hub URL = https://marketplace.visualstudio.com/manage/publishers/pgvscodeextentionpublisher/extensions/link-opener/hub"
