@@ -17,6 +17,10 @@ function activate(context) {
 
 	var urlRegex = /(https?:\/\/[^\s]+)/g;
 
+	function cleanup(url) {
+		return url.replace("\"", "")
+	}
+
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
@@ -30,8 +34,8 @@ function activate(context) {
 				filetext = current_docuemnt.getText()
 
 				filetext.replace(urlRegex, function (url) {
-					console.log("url=", url)
-					urls.push(url)
+					// console.log("url=", url)
+					urls.push(cleanup(url))
 				})
 				if (urls.length != 0) {
 					console.log("Found URLs", urls)
